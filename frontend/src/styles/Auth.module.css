@@ -1,0 +1,308 @@
+.authContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.authContainer.darkMode {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.authFormWrapper {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.authContainer.darkMode .authFormWrapper {
+  background: #2a2a3e;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.authHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.authHeader h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #1976d2;
+  font-weight: 700;
+}
+
+.authContainer.darkMode .authHeader h1 {
+  color: #64b5f6;
+}
+
+.authHeader p {
+  margin: 8px 0 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.authContainer.darkMode .authHeader p {
+  color: #aaa;
+}
+
+.authFormWrapper h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #1a237e;
+  font-weight: 600;
+}
+
+.authContainer.darkMode .authFormWrapper h2 {
+  color: #e0e0e0;
+}
+
+.authSubtitle {
+  margin: 0 0 24px 0;
+  color: #757575;
+  font-size: 14px;
+}
+
+.authContainer.darkMode .authSubtitle {
+  color: #999;
+}
+
+.authError {
+  background: #ffebee;
+  border: 1px solid #ef5350;
+  color: #c62828;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.authContainer.darkMode .authError {
+  background: #5a2c2c;
+  border-color: #8b4444;
+  color: #ff9999;
+}
+
+.authSuccess {
+  background: #e8f5e9;
+  border: 1px solid #66bb6a;
+  color: #2e7d32;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.authContainer.darkMode .authSuccess {
+  background: #2c5a4a;
+  border-color: #4a8b6b;
+  color: #90ee90;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.authFormGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.authFormGroup label {
+  font-weight: 500;
+  font-size: 14px;
+  color: #1a237e;
+}
+
+.authContainer.darkMode .authFormGroup label {
+  color: #d0d0d0;
+}
+
+.authFormGroup input,
+.authFormGroup select {
+  padding: 12px 14px;
+  border: 1px solid #90caf9;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #ffffff;
+  color: #1a237e;
+  transition: all 0.3s ease;
+}
+
+.authContainer.darkMode .authFormGroup input,
+.authContainer.darkMode .authFormGroup select {
+  background: #3a3a4e;
+  border-color: #555;
+  color: #e0e0e0;
+}
+
+.authFormGroup input:focus,
+.authFormGroup select:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+.emailInputGroup {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.emailInput {
+  flex: 1;
+}
+
+.domainSelect {
+  flex: 0 0 auto;
+  min-width: 150px;
+}
+
+.passwordInputGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.passwordInputGroup input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.eyeToggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1976d2;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.eyeToggle:hover {
+  color: #1565c0;
+}
+
+.emailHint {
+  color: #90caf9;
+  font-size: 12px;
+}
+
+.authContainer.darkMode .emailHint {
+  color: #777;
+}
+
+.forgotLink {
+  color: #1976d2;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  align-self: flex-end;
+  transition: color 0.3s ease;
+}
+
+.forgotLink:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+.authSubmitBtn {
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #42a5f5 0%, #1976d2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.authSubmitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.authSubmitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.backBtn {
+  padding: 12px 16px;
+  background: #90caf9;
+  color: #1a237e;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.backBtn:hover {
+  background: #64b5f6;
+  transform: translateY(-2px);
+}
+
+.authSignupLink {
+  text-align: center;
+  color: #757575;
+  font-size: 14px;
+}
+
+.authContainer.darkMode .authSignupLink {
+  color: #999;
+}
+
+.authSignupLink a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.authSignupLink a:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .authFormWrapper {
+    padding: 30px 20px;
+  }
+
+  .authHeader h1 {
+    font-size: 28px;
+  }
+
+  .authFormWrapper h2 {
+    font-size: 20px;
+  }
+
+  .domainSelect {
+    min-width: 120px;
+  }
+}
